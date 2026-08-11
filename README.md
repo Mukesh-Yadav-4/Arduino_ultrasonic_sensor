@@ -78,8 +78,7 @@ Status    Alert        Gate
 /
 ├── README.md
 ├── LICENSE
-├── .gitignore
-├── SmartParkingAssistant.ino
+├── .gitignore	
 ├── versions/
 │   └── v1-ultrasonic-gate/
 │       ├── README.md
@@ -93,7 +92,7 @@ Status    Alert        Gate
     └── roadmap.md
 ```
 
-The original root-level sketch is retained as a legacy reference. The canonical V1 source for this repository is in `versions/v1-ultrasonic-gate/src/smart_parking_v1.ino`.
+The canonical V1 Arduino source is located at `versions/v1-ultrasonic-gate/src/smart_parking_v1.ino`.
 
 ## Future Roadmap
 
