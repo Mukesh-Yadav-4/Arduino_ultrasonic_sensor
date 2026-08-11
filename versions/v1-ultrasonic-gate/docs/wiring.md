@@ -1,11 +1,11 @@
 # V1 Wiring Reference
 
-This document lists the full wiring for Version 1: **Ultrasonic Proximity-Based Automatic Gate**.
+This document lists the complete wiring for Version 1: **Ultrasonic Proximity-Based Automatic Gate**.
 
 ## Arduino Pin Map
 
 | Arduino Pin | Connected To | Function |
-| --- | --- | --- |
+|---|---|---|
 | 5V | HC-SR04 VCC | Power supply |
 | GND | HC-SR04 GND | Common ground |
 | D9 | HC-SR04 TRIG | Trigger pulse output |
@@ -35,7 +35,7 @@ This document lists the full wiring for Version 1: **Ultrasonic Proximity-Based 
 ### HC-SR04 Ultrasonic Sensor
 
 | Sensor Pin | Arduino Connection | Notes |
-| --- | --- | --- |
+|---|---|---|
 | VCC | 5V | Power |
 | GND | GND | Ground |
 | TRIG | D9 | Ultrasonic trigger |
@@ -44,7 +44,7 @@ This document lists the full wiring for Version 1: **Ultrasonic Proximity-Based 
 ### SG90 Servo Motor
 
 | Servo Wire | Arduino Connection | Notes |
-| --- | --- | --- |
+|---|---|---|
 | Red | 5V | Power |
 | Brown / Black | GND | Ground |
 | Orange / Yellow | D6 | Control signal |
@@ -52,14 +52,14 @@ This document lists the full wiring for Version 1: **Ultrasonic Proximity-Based 
 ### Piezo Buzzer
 
 | Buzzer Pin | Arduino Connection | Notes |
-| --- | --- | --- |
+|---|---|---|
 | Positive | D8 | Alert output |
 | Negative | GND | Ground |
 
 ### 16x2 LCD
 
 | LCD Pin | Arduino / Circuit Connection | Notes |
-| --- | --- | --- |
+|---|---|---|
 | RS | D12 | Register select |
 | EN | D11 | Enable |
 | D4 | D5 | Data line 4 |
@@ -76,17 +76,18 @@ This document lists the full wiring for Version 1: **Ultrasonic Proximity-Based 
 ### 10k Potentiometer
 
 | Potentiometer Pin | Connection | Notes |
-| --- | --- | --- |
+|---|---|---|
 | Outer pin 1 | 5V | One end of contrast reference |
 | Middle pin | LCD VO | Contrast wiper |
 | Outer pin 2 | GND | Other end of contrast reference |
 
 ## Wiring Notes
 
-- The LCD works only when `RW` is tied to ground.
-- Rotate the 10k potentiometer slowly if the backlight is on but the text is missing.
+- The LCD `RW` pin must be connected to GND.
+- Adjust the 10k potentiometer slowly if the LCD backlight is on but the text is not visible.
 - The sketch uses the LCD constructor `LiquidCrystal lcd(12, 11, 5, 4, 3, 2);`.
 - Keep a common ground between the Arduino and all connected components.
+- For a physical build, avoid powering a servo from the Arduino 5V rail if the servo causes voltage drops or resets. A suitable external 5V supply may be required, with its ground connected to Arduino GND.
 
 ## Prototype Reminder
 

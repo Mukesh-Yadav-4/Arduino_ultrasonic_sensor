@@ -4,7 +4,7 @@ This repository tracks the evolution of the **Secure Smart Parking & Access Cont
 
 ## V1 - Ultrasonic Proximity-Based Automatic Gate
 
-Status: COMPLETED / WORKING
+Status: WORKING
 
 Scope:
 - HC-SR04 ultrasonic distance sensing
@@ -18,15 +18,15 @@ Status: PLANNED
 
 Planned:
 - RC522 RFID reader
-- Authorized/unauthorized users
-- Access granted/denied
+- Authorized and unauthorized RFID cards
+- Access granted/denied based on card authentication
 - Gate control based on authentication
 
 ## V3 - Smart Parking Slot Management
 
 Status: PLANNED
 
-Planned:
+Planned:r
 - Multiple parking-space sensors
 - Occupancy detection
 - Available-space count
