@@ -10,42 +10,54 @@ This repository documents the project as a versioned build history so future upg
 
 Version 1 is a proximity-based prototype only. It does **not** identify vehicles, authenticate users, or provide IoT connectivity. The ultrasonic sensor detects distance, not vehicle identity.
 
+## Version 1 Demo
+
+### Working Prototype
+
+![Version 1 Overview](versions/v1-ultrasonic-gate/media/v1-overview.png)
+
+### Operating States
+
+| CLOSED                                                              | WARNING                                                               | OPEN                                                            |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
+| ![Closed State](versions/v1-ultrasonic-gate/media/Closed-state.png) | ![Warning State](versions/v1-ultrasonic-gate/media/Warning-state.png) | ![Open State](versions/v1-ultrasonic-gate/media/Open-state.png) |
+
 ## Current Status
 
-| Version | Focus | Status |
-| --- | --- | --- |
-| V1 | Ultrasonic proximity detection + automatic gate | Working |
-| V2 | RFID authentication | Planned |
-| V3 | Parking-space management | Planned |
-| V4 | IoT monitoring | Planned |
-| V5 | Optional computer vision | Planned |
+| Version | Focus                                           | Status      |
+| ------- | ----------------------------------------------- | ----------- |
+| V1      | Ultrasonic proximity detection + automatic gate | **Working** |
+| V2      | RFID authentication                             | Planned     |
+| V3      | Parking-space management                        | Planned     |
+| V4      | IoT monitoring                                  | Planned     |
+| V5      | Optional computer vision                        | Planned     |
 
 ## Project Evolution
 
-V1 -> Proximity detection + automatic gate
+**V1** → Proximity detection + automatic gate
 
-V2 -> RFID authentication
+**V2** → RFID authentication
 
-V3 -> Parking-space management
+**V3** → Parking-space management
 
-V4 -> IoT monitoring
+**V4** → IoT monitoring
 
-V5 -> Optional computer vision
+**V5** → Optional computer vision
 
 ## Current Architecture
 
 ```text
 HC-SR04
-	↓
+   ↓
 Distance measurement
-	↓
+   ↓
 Arduino Uno
-	↓
+   ↓
 Distance classification
-	↓
+   ↓
 CLOSED / WARNING / OPEN
-	↓
-┌──────────┬───────────┬
+   ↓
+┌──────────┬───────────┬───────────┐
 ↓          ↓           ↓
 LCD       Buzzer       Servo
 Status    Alert        Gate
@@ -53,24 +65,24 @@ Status    Alert        Gate
 
 ## Technologies
 
-- Arduino Uno
-- Arduino C/C++
-- HC-SR04 ultrasonic sensing
-- SG90 micro servo control
-- 16x2 parallel LCD interface
-- Piezo buzzer output
-- Tinkercad for initial prototype validation
+* Arduino Uno
+* Arduino C/C++
+* HC-SR04 ultrasonic sensing
+* SG90 micro servo control
+* 16x2 parallel LCD interface
+* Piezo buzzer output
+* Tinkercad for initial prototype validation
 
 ## Hardware
 
-- Arduino Uno
-- HC-SR04 ultrasonic sensor
-- SG90 micro servo motor
-- 16x2 LCD
-- Piezo buzzer
-- 10k potentiometer for LCD contrast
-- 220 ohm resistor for LCD backlight
-- Breadboard and jumper wires
+* Arduino Uno
+* HC-SR04 ultrasonic sensor
+* SG90 micro servo motor
+* 16x2 LCD
+* Piezo buzzer
+* 10k potentiometer for LCD contrast
+* 220 ohm resistor for LCD backlight
+* Breadboard and jumper wires
 
 ## Repository Structure
 
@@ -78,7 +90,7 @@ Status    Alert        Gate
 /
 ├── README.md
 ├── LICENSE
-├── .gitignore	
+├── .gitignore
 ├── versions/
 │   └── v1-ultrasonic-gate/
 │       ├── README.md
