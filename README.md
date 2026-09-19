@@ -2,6 +2,8 @@
 
 An evolving embedded systems project for an Electronics and Communication Engineering portfolio.
 
+> 🌐 **Portfolio & Systems Showcase:** [Mukesh Yadav | Biosignal Processing & Neuromorphic Hardware](https://mukesh-yadav-res-portfolio.vercel.app/)
+
 Version 1 is a working prototype named **Ultrasonic Proximity-Based Automatic Gate**. It uses an HC-SR04 ultrasonic sensor to measure proximity, an LCD for live status, a buzzer for alerts, and a servo motor to represent an automatic gate.
 
 ## Project Overview
